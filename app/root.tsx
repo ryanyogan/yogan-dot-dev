@@ -23,7 +23,7 @@ const Layout = (props: { children: ReactNode }) => (
         <span className="text-4xl mr-16">
           <SiRevoltdotchat className="text-slate-800" />
         </span>
-        <ul className="flex gap-16 text-lg font-semibold">
+        <ul className="flex gap-6 sm:gap-16 text-lg font-semibold">
           <li>
             <NavLink to="/" className={navLinkClass}>
               home
