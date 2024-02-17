@@ -8,15 +8,15 @@ function NavLinks() {
   return (
     <>
       <NavLink to="/" className={activeStyleCallback}>
-        home
+        HOME
       </NavLink>
 
       <NavLink to="/blog" className={activeStyleCallback}>
-        articles
+        BLOG
       </NavLink>
 
       <NavLink to="/about" className={activeStyleCallback}>
-        about
+        ABOUT
       </NavLink>
     </>
   );
