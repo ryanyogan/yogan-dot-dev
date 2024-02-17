@@ -16,9 +16,9 @@ export default function Index() {
     <div className="flex-1 p-10 grid sm:grid-cols-2 gap-16 sm:place-items-center">
       <div className="space-y-8">
         <div>
-          <h2 className="text-4xl font-bold">Incredible 🧠 Thoughts</h2>
+          <h2 className="text-4xl font-bold">Incredible 🤯 Thoughts</h2>
           <p className="text-gray-600 font-light">
-            Powered by this magnificient mind.
+            Powered by this spectacular brain.
           </p>
         </div>
         <hr />
