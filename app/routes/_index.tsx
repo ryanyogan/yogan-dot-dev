@@ -38,7 +38,7 @@ export default function Index() {
           Hi, I&apos;m Ryan 👋
         </h2>
 
-        <div className="font-light text-slate-800 space-y-4">
+        <div className="font-light text-black space-y-4">
           <p>
             I am a silly nerd who loves to build all-the-things. A beautiful
             user-experience, rock-solid services, and a kick-ass group of people
@@ -46,9 +46,9 @@ export default function Index() {
           </p>
           <p>
             When it comes to the technicals, I have enjoyed the sub-title of
-            Generalist. I see value Rails, Django, Go, Elixir, Node, .NET,
-            Swift, React, Svelte, why yes; SQL and BASH!, VIM since the iPhone
-            release 📱.
+            Generalist. I see value in Rails, Django, Go, Elixir, Node, .NET,
+            Swift, React, Svelte, why yes; SQL and BASH!, bye-the-way; I use vim
+            🤣
           </p>
           <p>
             I love it all, I see value in the proper tool for the job these
