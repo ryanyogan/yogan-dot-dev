@@ -9,6 +9,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { ReactNode } from "react";
+import { SiRevoltdotchat } from "react-icons/si";
 
 import "~/tailwind.css";
 
@@ -18,7 +19,10 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 const Layout = (props: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
     <header className="w-full max-w-7xl mx-auto p-10 border-b border-gray-100">
-      <nav>
+      <nav className="flex flex-row items-center">
+        <span className="text-4xl mr-16">
+          <SiRevoltdotchat className="text-slate-800" />
+        </span>
         <ul className="flex gap-16 text-lg font-semibold">
           <li>
             <NavLink to="/" className={navLinkClass}>
