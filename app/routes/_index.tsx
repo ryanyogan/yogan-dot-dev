@@ -16,18 +16,14 @@ export default function Index() {
     <div className="flex-1 p-10 grid sm:grid-cols-2 gap-16 sm:place-items-center">
       <div className="space-y-8">
         <div>
-          <h2 className="text-4xl font-bold">Remix 🤝 MDX</h2>
+          <h2 className="text-4xl font-bold">Incredible 🧠 Thoughts</h2>
           <p className="text-gray-600 font-light">
-            Powered by Vite plugins. Check out the{" "}
-            <a href="https://github.com/pcattori/remix-blog-mdx">
-              code on Github
-            </a>
-            .
+            Powered by this magnificient mind.
           </p>
         </div>
         <hr />
         <section>
-          <h3 className="text-xl tracking-wide">✨ FEATURED ✨</h3>
+          <h3 className="text-xl tracking-wide">✨ THOUGHTS ✨</h3>
           <ul className="mt-4 space-y-8">
             {featuredPosts.map((post) => (
               <li key={post.slug}>

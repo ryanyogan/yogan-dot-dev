@@ -43,21 +43,20 @@ const Layout = (props: { children: ReactNode }) => (
     </main>
     <footer className="w-full max-w-7xl mx-auto p-10 flex justify-center">
       <span className="text-sm text-gray-500">
-        Illustrations by{" "}
-        <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
-          Icons 8
+        a nerdier version of{" "}
+        <a href="https://ryanyogan.com" target="_blank" rel="noreferrer">
+          ryanyogan.com
         </a>{" "}
-        from <a href="https://icons8.com/illustrations">Ouch!</a>
       </span>
     </footer>
   </div>
 );
 
 export const meta: MetaFunction = () => [
-  { title: "Remix 🤝 MDX" },
+  { title: "Incredible Thoughts" },
   {
     name: "description",
-    content: "Template showing off Remix's new MDX capabilities",
+    content: "Incredible Thoughts",
   },
 ];
 
