@@ -32,7 +32,7 @@ export default function Index() {
         <hr />
 
         <motion.section variants={textVariants}>
-          <h3 className="text-slate-600 font-light">✨ I like these ones ✨</h3>
+          <h3 className="text-slate-600 font-bold">✨ Newer Articles ✨</h3>
           <ul className="mt-4 space-y-8">
             {featuredPosts.map((post) => (
               <li key={post.slug}>
