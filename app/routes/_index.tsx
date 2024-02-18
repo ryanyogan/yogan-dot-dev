@@ -47,7 +47,7 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="bg-gradient-to-t max-w-xl from-transparent to-slate-100 shadow-sm p-8 rounded-xl"
+        className="bg-gradient-to-t max-w-2xl from-transparent to-slate-50 shadow-sm p-8 rounded-xl"
       >
         <h2 className="text-slate-800 text-lg font-bold mb-2">
           Hi, I&apos;m Ryan 👋

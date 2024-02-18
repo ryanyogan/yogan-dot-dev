@@ -70,7 +70,7 @@
   }
 
   .selected {
-    @apply before:bg-primary before:md:scale-x-100 max-w-md:text-primary;
+    @apply before:bg-primary before:md:scale-x-100 max-w-md:text-slate-800;
   }
 
   a::not(.selected):hover {
