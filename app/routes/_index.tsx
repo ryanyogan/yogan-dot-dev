@@ -49,11 +49,11 @@ export default function Index() {
         animate="visible"
         className="bg-gradient-to-t max-w-2xl from-transparent to-slate-100 p-8 rounded-xl"
       >
-        <h2 className="text-slate-800 text-lg font-bold mb-2">
+        <h2 className="text-slate-900 text-lg font-bold mb-2">
           Hi, I&apos;m Ryan 👋
         </h2>
 
-        <div className="font-light text-black space-y-4">
+        <div className="text-gray-800 space-y-4">
           <p>
             I am a silly nerd who loves to build all-the-things. A beautiful
             user-experience, rock-solid services, and a kick-ass group of people

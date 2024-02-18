@@ -9,22 +9,52 @@ import {
 } from "@remix-run/react";
 import { ReactNode } from "react";
 
+import { SiDiscord, SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import socialLinks from "~/constants/social-links.json";
 import "~/tailwind.css";
 import { Header } from "./components/header";
 
 const Layout = (props: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
     <Header />
+
     <main className="w-full max-w-7xl mx-auto flex-1 flex">
       {props.children}
     </main>
-    <footer className="w-full max-w-7xl mx-auto p-10 flex justify-center">
-      <span className="text-sm text-gray-500">
-        a nerdier version of{" "}
-        <a href="https://ryanyogan.com" target="_blank" rel="noreferrer">
-          ryanyogan.com
-        </a>{" "}
-      </span>
+
+    <footer className="w-full text-slate-500 max-w-7xl mx-auto flex gap-x-2 justify-center">
+      <a
+        href={socialLinks.linkedin}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block p-5 hover:text-slate-800"
+      >
+        <SiLinkedin />
+      </a>
+      <a
+        href={socialLinks.twitter}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block p-5 hover:text-gray-800"
+      >
+        <SiTwitter />
+      </a>
+      <a
+        href={socialLinks.github}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block p-5 hover:text-gray-800"
+      >
+        <SiGithub />
+      </a>
+      <a
+        href={socialLinks.discord}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block p-5 hover:text-gray-800"
+      >
+        <SiDiscord />
+      </a>
     </footer>
   </div>
 );
