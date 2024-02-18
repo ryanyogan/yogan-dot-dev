@@ -30,7 +30,7 @@ export default function Component() {
 
         <motion.div variants={textVariants}>
           {posts.map((post) => (
-            <li key={post.slug}>
+            <li key={post.slug} className="pb-10">
               <Post {...post} />
             </li>
           ))}

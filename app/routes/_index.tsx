@@ -55,9 +55,9 @@ export default function Index() {
 
         <div className="text-gray-800 space-y-4">
           <p>
-            I am a silly nerd who loves to build all-the-things. A beautiful
-            user-experience, rock-solid services, and a kick-ass group of people
-            make me happy at work :)
+            I&apos;m a goofy engineering leader who loves to build
+            all-the-things. A beautiful user-experience, rock-solid services,
+            and a kick-ass group of people make me happy at work :)
           </p>
           <p>
             When it comes to the technicals, I have enjoyed the sub-title of
