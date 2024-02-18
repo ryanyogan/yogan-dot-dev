@@ -60,10 +60,11 @@ const Layout = (props: { children: ReactNode }) => (
 );
 
 export const meta: MetaFunction = () => [
-  { title: "Incredible Thoughts" },
+  { title: "Ryan Yogan - Incredible Thoughts" },
   {
     name: "description",
-    content: "Incredible Thoughts",
+    content:
+      "I am an engineering leader, software developer, aviation nerd, and lover of all in the ice-rink.",
   },
 ];
 
