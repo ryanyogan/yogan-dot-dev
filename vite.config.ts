@@ -17,4 +17,7 @@ export default defineConfig({
     }),
     remix(),
   ],
+  optimizeDeps: {
+    exclude: ["@resvg/resvg-js"],
+  },
 });
