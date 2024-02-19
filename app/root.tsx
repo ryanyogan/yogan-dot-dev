@@ -6,13 +6,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  json,
+  useLoaderData,
+  useLocation,
 } from "@remix-run/react";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 import { SiDiscord, SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 import socialLinks from "~/constants/social-links.json";
 import "~/tailwind.css";
 import { Header } from "./components/header";
+
+import * as gtag from "~/utils/gtag.client";
 
 const Layout = (props: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
@@ -68,7 +73,20 @@ export const meta: MetaFunction = () => [
   },
 ];
 
+export async function loader() {
+  return json({ gaTrackingId: process.env.GA_TRACKING_ID });
+}
+
 export default function App() {
+  const location = useLocation();
+  const { gaTrackingId } = useLoaderData<typeof loader>();
+
+  useEffect(() => {
+    if (gaTrackingId?.length) {
+      gtag.pageview(location.pathname, gaTrackingId);
+    }
+  }, [location, gaTrackingId]);
+
   return (
     <html lang="en">
       <head>
@@ -78,6 +96,30 @@ export default function App() {
         <Links />
       </head>
       <body>
+        {process.env.NODE_ENV === "development" || !gaTrackingId ? null : (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+            />
+            <script
+              async
+              id="gtag-init"
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${gaTrackingId}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+              }}
+            />
+          </>
+        )}
+
         <Layout>
           <Outlet />
         </Layout>
