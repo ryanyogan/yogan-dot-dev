@@ -83,13 +83,12 @@ export default function Index() {
           <p>
             I&apos;m a silly nerd who loves to build & teach all-the-things. A
             beautiful user-experience, rock-solid services, and a kick-ass group
-            of individuals is 👌
+            of individuals is my jam.
           </p>
           <p>
             When it comes to the technicals, I have enjoyed the sub-title of
             Generalist. I see value in Rails, Django, Go, Elixir, Node, .NET,
-            Swift, React, Svelte, why yes; SQL and BASH!, bye-the-way; I use vim
-            🤣
+            Swift, React, Svelte, why yes; SQL and BASH!. Rust is on-going, hah.
           </p>
           <p>
             I love it all, I see value in the proper tool for the job these
