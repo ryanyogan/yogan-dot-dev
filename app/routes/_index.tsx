@@ -46,7 +46,7 @@ export default function Index() {
         className="space-y-8"
       >
         <div>
-          <h2 className="text-4xl font-bold">Incredible 🤯 Thoughts</h2>
+          <h2 className="text-4xl font-bold">Incredible Thoughts 🤯 </h2>
           <p className="text-gray-600 font-light">
             Powered by this spectacular brain.
           </p>
@@ -70,17 +70,20 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="bg-gradient-to-t max-w-2xl from-transparent to-slate-100 p-8 rounded-xl"
+        className="max-w-lg"
       >
-        <h2 className="text-slate-900 text-lg font-bold mb-2">
+        <h2 className="text-slate-900 text-2xl font-bold">
           Hi, I&apos;m Ryan 👋
         </h2>
+        <p className="text-gray-600 font-light mb-2">
+          Engineering Leader, Software Developer, Aviation Nerd
+        </p>
 
-        <div className="text-gray-800 space-y-4">
+        <div className="text-gray-900 space-y-4">
           <p>
-            I&apos;m a goofy engineering leader who loves to build
-            all-the-things. A beautiful user-experience, rock-solid services,
-            and a kick-ass group of people make me happy at work :)
+            I&apos;m a silly nerd who loves to build & teach all-the-things. A
+            beautiful user-experience, rock-solid services, and a kick-ass group
+            of individuals is 👌
           </p>
           <p>
             When it comes to the technicals, I have enjoyed the sub-title of
