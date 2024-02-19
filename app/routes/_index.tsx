@@ -1,18 +1,41 @@
-import { json } from "@remix-run/node";
+import { LoaderFunctionArgs, MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
 
 import { getPosts } from "~/.server/posts";
 import { Post } from "~/components/post";
 import { containerVariants, textVariants } from "~/utils/animation-config";
+import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from "./og";
 
-export const loader = async () => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const posts = await getPosts();
-  return json(posts.filter((post) => post.frontmatter.featured));
+  const { origin } = new URL(request.url);
+  const ogImageUrl = `${origin}/og?title=Incredible%20🤯%20Thoughts`;
+
+  return json({
+    featuredPosts: posts.filter((post) => post.frontmatter.featured),
+    ogImageUrl,
+  });
+};
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const ogImageUrl = data?.ogImageUrl;
+
+  return [
+    {
+      title: "Incredible Thoughts",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Incredible Thoughts",
+      "og:title": "Incredible Thoughts",
+      "og:image:width": String(OG_IMAGE_WIDTH),
+      "og:image:height": String(OG_IMAGE_HEIGHT),
+      "og:image": ogImageUrl,
+    },
+  ];
 };
 
 export default function Index() {
-  const featuredPosts = useLoaderData<typeof loader>();
+  const { featuredPosts } = useLoaderData<typeof loader>();
 
   return (
     <div className="flex-1 p-10 grid grid-cols-1 lg:grid-cols-2 gap-16 sm:place-items-center">
