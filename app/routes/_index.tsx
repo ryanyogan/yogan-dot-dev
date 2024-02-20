@@ -71,20 +71,19 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-md order-first lg:order-last"
+        className="max-w-md"
       >
         <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
         </h2>
-        <p className="text-gray-900 font-light mb-2">
-          Engineering Leader, Software Developer, Aviation Nerd
-        </p>
+        <p className="text-gray-900 font-light mb-2"></p>
 
         <div className="text-gray-900 space-y-4">
           <p>
-            I&apos;m a silly nerd who loves to build & teach all-the-things. A
-            beautiful user-experience, rock-solid services, and a kick-ass group
-            of individuals is my jam.
+            I&apos;m a silly nerd Engineering Leader, Software Developer, and
+            Aviation Nerd who loves to build & teach all-the-things. A beautiful
+            user-experience, rock-solid services, and a kick-ass group of
+            individuals is my jam.
           </p>
           <p>
             When it comes to the technicals, I have enjoyed the sub-title of
