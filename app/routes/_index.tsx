@@ -74,7 +74,7 @@ export default function Index() {
         animate="visible"
         className="max-w-lg order-first lg:order-last"
       >
-        <h2 className="text-slate-900 text-2xl sm:text-4xl font-bold">
+        <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
         </h2>
         <p className="text-gray-900 font-light mb-2">
