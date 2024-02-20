@@ -50,14 +50,13 @@ export default function Index() {
             Incredible Thoughts 🤯{" "}
           </h2>
           <p className="text-gray-600 font-light">
-            Powered by this spectacular brain.
+            Recent thoughts by this spectacular brain.
           </p>
         </div>
 
         <hr />
 
         <motion.section variants={textVariants}>
-          <h3 className="text-slate-900 font-bold">Latest Posts ✨</h3>
           <ul className="mt-4 space-y-8">
             {featuredPosts.map((post) => (
               <li key={post.slug}>
@@ -72,7 +71,7 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-md"
+        className="max-w-md order-first lg:order-last"
       >
         <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
