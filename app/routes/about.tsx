@@ -55,12 +55,12 @@ export default function AboutPage() {
           </h2>
           Embarking on my tech journey with a 386 computer, I quickly became the
           family IT department, graduating from building PCs to conjuring AOL
-          &quot;proggies&auot; in Visual Basic. My love affair with server racks
+          &quot;proggies&quot; in Visual Basic. My love affair with server racks
           in chilly rooms was just the beginning, and my entry into theater!
           Fast forward through a symphony of C#, PHP spells, and Rails-powered
           rollercoasters, and you&apos;ll find me professing my love for all
           things engineering. These days, I&apos;m crafting video game
-          masterpieces in Rust—so &quot;unique&auot; they&apos;re practically
+          masterpieces in Rust—so &quot;unique&quot; they&apos;re practically
           art, and hoarding leadership books like they&apos;re going out of
           style. My toolkit? A kaleidoscope of TypeScript frameworks so
           infamous, they dare not speak their names.
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <br />
           <br />
           My home doubles as an aircraft hangar, thanks to an obsession with
-          tinkering on aircrafts and simulators. I&apos;ve taken &aquot;home
-          office&aquot; to new altitudes, recreating a commercial flight
+          tinkering on aircrafts and simulators. I&apos;ve taken &quot;home
+          office&quot; to new altitudes, recreating a commercial flight
           experience that&apos;s just one cranky passenger short of actual
           takeoff.
           <h2 className="text-lg sm:text-2xl font-bold mt-10">
