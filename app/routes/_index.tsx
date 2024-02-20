@@ -57,7 +57,7 @@ export default function Index() {
         <hr />
 
         <motion.section variants={textVariants}>
-          <h3 className="text-slate-600 font-bold">✨ Newer Articles ✨</h3>
+          <h3 className="text-slate-900 font-bold">Latest Posts ✨</h3>
           <ul className="mt-4 space-y-8">
             {featuredPosts.map((post) => (
               <li key={post.slug}>
@@ -72,12 +72,12 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-lg"
+        className="max-w-lg order-first lg:order-last"
       >
-        <h2 className="text-slate-900 text-2xl font-bold">
-          Hi, I&apos;m Ryan 👋
+        <h2 className="text-slate-900 text-2xl sm:text-4xl font-bold">
+          Hi, 👋 I&apos;m Ryan
         </h2>
-        <p className="text-gray-600 font-light mb-2">
+        <p className="text-gray-900 font-light mb-2">
           Engineering Leader, Software Developer, Aviation Nerd
         </p>
 

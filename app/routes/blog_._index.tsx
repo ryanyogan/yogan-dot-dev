@@ -20,7 +20,9 @@ export default function Component() {
     >
       <ul className="space-y-8">
         <div>
-          <h2 className="text-4xl font-bold">Incredible 🤯 Thoughts</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold">
+            Incredible 🤯 Thoughts
+          </h2>
           <p className="text-gray-600 font-light">
             Powered by this spectacular brain.
           </p>
