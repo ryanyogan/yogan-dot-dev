@@ -68,13 +68,11 @@ export default function Index() {
       </motion.div>
 
       <div className="max-w-md order-first lg:order-last">
-        <h2 className="text-slate-900 text-2xl font-bold">
+        <h2 className="text-slate-900 text-3xl font-bold">
           Hi, 👋 I&apos;m Ryan
         </h2>
 
-        <p className="text-gray-900 font-light mb-2"></p>
-
-        <div className="text-gray-600 space-y-4">
+        <div className="text-gray-600 space-y-4 mt-4">
           <p>
             As an Engineering Leader and Software Developer. I&apos;m passionate
             about crafting exceptional user experiences, developing robust
