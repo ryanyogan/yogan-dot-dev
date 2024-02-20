@@ -45,14 +45,14 @@ export default function Index() {
         variants={containerVariants}
         className="space-y-8"
       >
-        <div>
+        <motion.div variants={textVariants}>
           <h2 className="text-2xl sm:text-4xl font-bold">
             Incredible Thoughts 🤯{" "}
           </h2>
           <p className="text-gray-600 font-light">
             Recent thoughts by this spectacular brain.
           </p>
-        </div>
+        </motion.div>
 
         <hr />
 
@@ -71,17 +71,20 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-md"
+        className="max-w-md order-first lg:order-last"
       >
         <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
         </h2>
+
+        <hr className="my-6" />
+
         <p className="text-gray-900 font-light mb-2"></p>
 
         <div className="text-gray-900 space-y-4">
           <p>
-            I&apos;m a silly nerd Engineering Leader, Software Developer, and
-            Aviation Nerd who loves to build & teach all-the-things. A beautiful
+            I&apos;m a Engineering Leader, Software Developer, and Aviation Nerd
+            who loves to build & teach all-the-things. A beautiful
             user-experience, rock-solid services, and a kick-ass group of
             individuals is my jam.
           </p>
