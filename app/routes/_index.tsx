@@ -67,12 +67,7 @@ export default function Index() {
         </motion.section>
       </motion.div>
 
-      <motion.div
-        variants={textVariants}
-        initial="hidden"
-        animate="visible"
-        className="max-w-md order-first lg:order-last"
-      >
+      <div className="max-w-md order-first lg:order-last">
         <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
         </h2>
@@ -97,7 +92,7 @@ export default function Index() {
             const` 🤷
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
