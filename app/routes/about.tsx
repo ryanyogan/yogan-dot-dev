@@ -37,7 +37,7 @@ export default function AboutPage() {
             2024 will be a year of personal growth
           </h2>
           I have a personal &quot;OKR&quot; that I will work on being open, I
-          will ask for help
+          will ask for help{" "}
           <a
             href="https://www.linkedin.com/feed/update/urn:li:activity:7161089259175645184/"
             target="_blank"
