@@ -72,7 +72,7 @@ export default function Index() {
         variants={textVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-lg order-first lg:order-last"
+        className="max-w-md"
       >
         <h2 className="text-slate-900 text-2xl font-bold">
           Hi, 👋 I&apos;m Ryan
