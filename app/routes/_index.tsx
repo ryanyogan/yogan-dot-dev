@@ -76,20 +76,22 @@ export default function Index() {
 
         <div className="text-gray-600 space-y-4">
           <p>
-            I&apos;m a Engineering Leader, Software Developer, and Aviation Nerd
-            who loves to build & teach all-the-things. A beautiful
-            user-experience, rock-solid services, and a kick-ass group of
-            individuals is my jam.
+            As an Engineering Leader, Software Developer, and avid Aviation
+            Enthusiast, I&apos;m passionate about crafting exceptional user
+            experiences, developing robust services, and nurturing a dynamic
+            team.
           </p>
           <p>
-            When it comes to the technicals, I have enjoyed the sub-title of
-            Generalist. I see value in Rails, Django, Go, Elixir, Node, .NET,
-            Swift, React, Svelte, why yes; SQL and BASH!. Rust is on-going, hah.
+            My approach is that of a Technical Generalist, recognizing the
+            unique value each technology brings to the table. Currently,
+            I&apos;m diving into Rust, and I feel clueless; however, embracing
+            the journey of continuous learning.
           </p>
           <p>
-            I love it all, I see value in the proper tool for the job these
-            days. Moons ago, yeah, I would have bike-shedded with you on `let vs
-            const` 🤷
+            I believe in choosing the right tool for the task, a philosophy that
+            has guided my evolution beyond debates over coding standards like
+            let versus const. My mission is to build and teach, leveraging my
+            broad skill set to innovate and inspire.
           </p>
         </div>
       </div>
