@@ -77,11 +77,9 @@ export default function Index() {
           Hi, 👋 I&apos;m Ryan
         </h2>
 
-        <hr className="my-6" />
-
         <p className="text-gray-900 font-light mb-2"></p>
 
-        <div className="text-gray-900 space-y-4">
+        <div className="text-gray-600 space-y-4">
           <p>
             I&apos;m a Engineering Leader, Software Developer, and Aviation Nerd
             who loves to build & teach all-the-things. A beautiful
