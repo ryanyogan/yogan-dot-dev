@@ -76,10 +76,9 @@ export default function Index() {
 
         <div className="text-gray-600 space-y-4">
           <p>
-            As an Engineering Leader, Software Developer, and avid Aviation
-            Enthusiast, I&apos;m passionate about crafting exceptional user
-            experiences, developing robust services, and nurturing a dynamic
-            team.
+            As an Engineering Leader and Software Developer. I&apos;m passionate
+            about crafting exceptional user experiences, developing robust
+            services, and nurturing a dynamic team.
           </p>
           <p>
             My approach is that of a Technical Generalist, recognizing the
