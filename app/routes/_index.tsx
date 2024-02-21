@@ -80,9 +80,9 @@ export default function Index() {
           </p>
           <p>
             My approach is that of a Technical Generalist, recognizing the
-            unique value each technology brings to the table. Currently,
-            I&apos;m diving into Rust, and I feel clueless; however, embracing
-            the journey of continuous learning.
+            unique value each technology brings to the table. Learn
+            all-the-things, and then choose the right tool for the task
+            (gold-fish method).
           </p>
           <p>
             I believe in choosing the right tool for the task, a philosophy that
