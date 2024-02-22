@@ -17,11 +17,11 @@ export default function AboutPage() {
         animate="visible"
         className="prose"
       >
-        <div className="leading-8">
+        <div className="text-slate-700">
           <h2 className="text-lg sm:text-2xl font-bold mt-10">
             What&apos;s up with the &quot;Incredible Thoughts?&quot;
           </h2>
-          <div className="leading-8 mb-2">
+          <div className="mb-2">
             I love the movie &quot;Popstar: Never Stop Never Stopping,&quot;
             feel free to enjoy Michael Bolton&apos;s &quot;Incredible
             Thoughts&quot; scene below. 🔥
