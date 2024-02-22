@@ -75,43 +75,156 @@ const programmingLanguages = [
   },
 ];
 
-export default function BookShell() {
+const programmingFrameworks = [
+  {
+    name: "Rails",
+    description:
+      "A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.",
+    url: "https://rubyonrails.org/",
+  },
+  {
+    name: "Next.JS",
+    description: "The React Framework for Production.",
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "Phoenix",
+    description:
+      "A productive web framework that does not compromise speed and maintainability.",
+    url: "https://www.phoenixframework.org/",
+  },
+  {
+    name: "Node.js",
+    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    url: "https://nodejs.org/",
+  },
+  {
+    name: "Django",
+    description:
+      "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
+    url: "https://www.djangoproject.com/",
+  },
+  {
+    name: "React",
+    description: "A JavaScript library for building user interfaces.",
+    url: "https://reactjs.org/",
+  },
+  {
+    name: "Angular",
+    description:
+      "A platform and framework for building single-page client applications using HTML and TypeScript.",
+    url: "https://angular.io/",
+  },
+  {
+    name: "Svelte",
+    description: "A new way to build web applications.",
+    url: "https://svelte.dev/",
+  },
+  {
+    name: "Remix",
+    description: "A full-stack web framework for the modern web.",
+    url: "https://remix.run/",
+  },
+  {
+    name: "Tokio",
+    description:
+      "A runtime for writing reliable, asynchronous, and slim applications with the Rust programming language.",
+    url: "https://tokio.rs/",
+  },
+  {
+    name: "iOS",
+    description:
+      "A mobile operating system created and developed by Apple Inc. exclusively for its hardware.",
+    url: "https://developer.apple.com/ios/",
+  },
+  {
+    name: "Android",
+    description: "A mobile operating system developed by Google.",
+    url: "https://developer.android.com/",
+  },
+  {
+    name: ".NET",
+    description:
+      "A free, cross-platform, open-source developer platform for building many different types of applications.",
+    url: "https://dotnet.microsoft.com/",
+  },
+  {
+    name: "Watermill.io",
+    description: "A Go library for working efficiently with message streams.",
+    url: "https://watermill.io/",
+  },
+  {
+    name: "Kubernetes",
+    description:
+      "An open-source platform designed to automate deploying, scaling, and operating application containers.",
+    url: "https://kubernetes.io/",
+  },
+];
+
+export default function BookShelf() {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="p-10"
-    >
-      <ul className="space-y-8">
+    <div className="p-10">
+      <h2 className="text-2xl font-bold sm:text-4xl">My Bookshelf 📚</h2>
+      <p className="font-light text-gray-600">
+        Projects, Langauges/Paradigms, Good Reads, Books, Videos, and more.
+      </p>
+
+      <hr className="my-8" />
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="grid grid-cols-1 gap-8 md:grid-cols-2"
+      >
         <div>
-          <h2 className="text-2xl sm:text-4xl font-bold">My Bookshelf 📚</h2>
-          <p className="text-gray-600 font-light">
-            Projects, Langauges/Paradigms, Good Reads, Books, Videos, and more.
-          </p>
+          <h4 className="text-2xl font-semibold text-slate-800">Languages</h4>
+          <motion.div variants={textVariants}>
+            <ul className="mt-4 space-y-2">
+              {programmingLanguages.map((language) => (
+                <li key={language.name}>
+                  <a
+                    href={language.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-slate-800 hover:underline"
+                  >
+                    {language.name}
+                  </a>
+                  <p className="text-sm text-gray-500">
+                    {language.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
 
-        <hr />
-
-        <motion.div variants={textVariants}>
-          <h4 className="text-slate-800 font-semibold text-2xl">Languages</h4>
-          <ul className="mt-4 space-y-1">
-            {programmingLanguages.map((language) => (
-              <li key={language.name}>
-                <a
-                  href={language.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-800 font-semibold hover:underline"
-                >
-                  {language.name}
-                </a>
-                <p className="text-gray-500 text-sm">{language.description}</p>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      </ul>
-    </motion.div>
+        <div>
+          <h4 className="text-2xl font-semibold text-slate-800">
+            Frameworks/Paradigms
+          </h4>
+          <motion.div variants={textVariants}>
+            <ul className="mt-4 space-y-2">
+              {programmingFrameworks.map((language) => (
+                <li key={language.name}>
+                  <a
+                    href={language.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-slate-800 hover:underline"
+                  >
+                    {language.name}
+                  </a>
+                  <p className="text-sm text-gray-500">
+                    {language.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 }

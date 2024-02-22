@@ -44,7 +44,7 @@ export async function createOGImage(title: string, requestUrl: string) {
     >
       <div>{title}</div>
     </div>,
-    options
+    options,
   );
 
   const resvg = new Resvg(svg);

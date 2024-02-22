@@ -20,14 +20,14 @@ import { Header } from "./components/header";
 import * as gtag from "~/utils/gtag.client";
 
 const Layout = (props: { children: ReactNode }) => (
-  <div className="min-h-screen flex flex-col">
+  <div className="flex min-h-screen flex-col">
     <Header />
 
-    <main className="w-full max-w-7xl mx-auto flex-1 flex">
+    <main className="mx-auto flex w-full max-w-7xl flex-1">
       {props.children}
     </main>
 
-    <footer className="w-full text-slate-500 max-w-7xl mx-auto flex gap-x-2 justify-center">
+    <footer className="mx-auto flex w-full max-w-7xl justify-center gap-x-2 text-slate-500">
       <a
         href={socialLinks.linkedin}
         target="_blank"
