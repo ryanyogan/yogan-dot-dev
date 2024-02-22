@@ -161,6 +161,21 @@ const programmingFrameworks = [
   },
 ];
 
+const leadershipMaterial = [
+  {
+    name: "Peopleware: Productive Projects & Teams",
+    description:
+      "A book on the human side of software development, and how to manage and lead software projects.",
+    url: "https://www.amazon.com/Peopleware-Productive-Projects-Tom-DeMarco/dp/0932633439",
+  },
+  {
+    name: "Engineering Managment for the Rest of Us",
+    description:
+      "THIS BOOK ISN’T FOR THE `BORN LEADERS` THIS BOOK IS FOR THE REST OF US.",
+    url: "https://www.engmanagement.dev/",
+  },
+];
+
 export default function BookShelf() {
   return (
     <div className="p-10">
@@ -178,7 +193,34 @@ export default function BookShelf() {
         className="grid grid-cols-1 gap-8 md:grid-cols-2"
       >
         <div>
-          <h4 className="text-2xl font-semibold text-slate-800">Languages</h4>
+          <h4 className="text-2xl font-semibold text-slate-800">
+            Leadership Material 📚
+          </h4>
+          <motion.div variants={textVariants}>
+            <ul className="mt-4 space-y-2">
+              {leadershipMaterial.map((language) => (
+                <li key={language.name}>
+                  <a
+                    href={language.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-slate-800 hover:underline"
+                  >
+                    {language.name}
+                  </a>
+                  <p className="text-sm text-gray-500">
+                    {language.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
+        <div>
+          <h4 className="text-2xl font-semibold text-slate-800">
+            Languages I Enjoy ❤️
+          </h4>
           <motion.div variants={textVariants}>
             <ul className="mt-4 space-y-2">
               {programmingLanguages.map((language) => (
@@ -202,7 +244,7 @@ export default function BookShelf() {
 
         <div>
           <h4 className="text-2xl font-semibold text-slate-800">
-            Frameworks/Paradigms
+            Frameworks I Use 🚀
           </h4>
           <motion.div variants={textVariants}>
             <ul className="mt-4 space-y-2">
