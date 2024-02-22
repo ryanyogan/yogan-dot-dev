@@ -43,7 +43,7 @@ export default function Index() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="space-y-8"
+        className="space-y-8 max-w-md"
       >
         <motion.div variants={textVariants}>
           <h2 className="text-2xl sm:text-4xl font-bold">
