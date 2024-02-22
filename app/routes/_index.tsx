@@ -92,8 +92,12 @@ export default function Index() {
           </p>
 
           <div>
-            <Link to="/" prefetch="intent" className="text-slate-600 underline">
-              Check out my book-shelf
+            <Link
+              to="/bookshelf"
+              prefetch="intent"
+              className="text-slate-600 underline"
+            >
+              Check out my book shelf
             </Link>
           </div>
         </div>
