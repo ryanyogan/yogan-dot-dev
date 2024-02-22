@@ -75,20 +75,20 @@ export default function Index() {
         <div className="text-gray-600 space-y-4 mt-4">
           <p>
             As an Engineering Leader and Software Developer. I&apos;m passionate
-            about crafting exceptional user experiences, developing robust
-            services, and nurturing a dynamic team.
+            about crafting exceptional user experiences, developing rock-solid
+            distributed services, and nurturing a dynamic 🤝 team development.
           </p>
           <p>
-            My approach is that of a Technical Generalist, recognizing the
-            unique value each technology brings to the table. Learn
-            all-the-things, and then choose the right tool for the task
-            (gold-fish method).
+            My leadership style is rooted in empathy, curiosity, and
+            cheerleading. I believe in the power of a growth mindset, and I
+            strive to create an environemnt where everyone may learn, thrive,
+            and have 🎉 fun.
           </p>
           <p>
-            I believe in choosing the right tool for the task, a philosophy that
-            has guided my evolution beyond debates over coding standards like
-            let versus const. My mission is to build and teach, leveraging my
-            broad skill set to innovate and inspire.
+            My engineering approach is that of a Technical Generalist,
+            recognizing the unique value each technology brings to the table. My
+            mission is to build and teach, leveraging my broad skill set to
+            innovate and 💡 inspire.
           </p>
 
           <div>
