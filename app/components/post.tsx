@@ -5,7 +5,7 @@ import type { PostMeta } from "~/.server/posts";
 export const Post = ({ slug, frontmatter }: PostMeta) => {
   return (
     <article className="space-y-2">
-      <Link to={`/blog/${slug}`}>
+      <Link prefetch="intent" to={`/blog/${slug}`}>
         <h3 className="text-xl sm:text-3xl font-bold">{frontmatter.title}</h3>
       </Link>
 

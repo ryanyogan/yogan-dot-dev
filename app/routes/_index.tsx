@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs, MetaFunction, json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
 
 import { getPosts } from "~/.server/posts";
@@ -90,6 +90,12 @@ export default function Index() {
             let versus const. My mission is to build and teach, leveraging my
             broad skill set to innovate and inspire.
           </p>
+
+          <div>
+            <Link to="/" prefetch="intent" className="text-slate-600 underline">
+              Check out my book-shelf
+            </Link>
+          </div>
         </div>
       </div>
     </div>

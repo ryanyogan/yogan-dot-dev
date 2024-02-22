@@ -7,15 +7,15 @@ const activeStyleCallback = ({ isActive }: { isActive: boolean }) =>
 function NavLinks() {
   return (
     <>
-      <NavLink to="/" className={activeStyleCallback}>
+      <NavLink prefetch="intent" to="/" className={activeStyleCallback}>
         HOME
       </NavLink>
 
-      <NavLink to="/blog" className={activeStyleCallback}>
+      <NavLink prefetch="intent" to="/blog" className={activeStyleCallback}>
         BLOG
       </NavLink>
 
-      <NavLink to="/about" className={activeStyleCallback}>
+      <NavLink prefetch="intent" to="/about" className={activeStyleCallback}>
         ABOUT
       </NavLink>
     </>
