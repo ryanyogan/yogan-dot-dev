@@ -38,18 +38,18 @@ export default function Index() {
   const { featuredPosts } = useLoaderData<typeof loader>();
 
   return (
-    <div className="flex-1 p-10 grid grid-cols-1 lg:grid-cols-2 gap-16 sm:place-items-center">
+    <div className="grid flex-1 grid-cols-1 gap-16 p-10 sm:place-items-center lg:grid-cols-2">
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="space-y-8 max-w-md"
+        className="max-w-md space-y-8"
       >
         <motion.div variants={textVariants}>
-          <h2 className="text-2xl sm:text-4xl font-bold">
+          <h2 className="text-2xl font-bold sm:text-4xl">
             Incredible Thoughts 🤯{" "}
           </h2>
-          <p className="text-gray-600 font-light">
+          <p className="font-light text-gray-600">
             Recent thoughts by this spectacular brain.
           </p>
         </motion.div>
@@ -67,12 +67,12 @@ export default function Index() {
         </motion.section>
       </motion.div>
 
-      <div className="max-w-md order-first lg:order-last">
-        <h2 className="text-slate-900 text-3xl font-bold">
+      <div className="order-first max-w-md lg:order-last">
+        <h2 className="text-3xl font-bold text-slate-900">
           Hi, 👋 I&apos;m Ryan
         </h2>
 
-        <div className="text-gray-600 space-y-4 mt-4">
+        <div className="mt-4 space-y-4 text-gray-600">
           <p>
             As an Engineering Leader and Software Developer. I&apos;m passionate
             about crafting exceptional user experiences, developing rock-solid
@@ -97,7 +97,7 @@ export default function Index() {
               prefetch="intent"
               className="text-slate-600 underline"
             >
-              Check out my book shelf
+              Check out my book shelf to see how `polyglot` I went. 🤣
             </Link>
           </div>
         </div>
