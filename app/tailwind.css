@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 * {
-  -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-  --background-body: #fff;
-  --text-main: #36393b;
-  --text-secondary: #6b6f72;
-  --primary-color: #548e9b;
-  --dark-background-body: #202122;
-  --dark-text-main: #dfdfdf;
-  --dark-text-secondary: #ccc;
+    --background-body: #fff;
+    --text-main: #36393b;
+    --text-secondary: #6b6f72;
+    --primary-color: #548e9b;
+    --dark-background-body: #202122;
+    --dark-text-main: #dfdfdf;
+    --dark-text-secondary: #ccc;
 }
 
 ::selection {
-  background-color: var(--primary-color); /* Primary color */
-  color: var(--text-main); /* Primary light mode text color */
+    background-color: var(--primary-color); /* Primary color */
+    color: var(--text-main); /* Primary light mode text color */
 }
 
 /* @layer base {
@@ -26,8 +26,8 @@
     font-family: Merriweather, serif;
   } */
 
-  /* latin */
-  /* @font-face {
+/* latin */
+/* @font-face {
     font-family: "Fira Sans";
     font-style: normal;
     font-weight: 700;
@@ -65,24 +65,24 @@
 } */
 
 @layer components {
-  .navlink {
-    @apply relative block min-w-[70px] px-[5px] py-2.5 text-center text-inherit no-underline before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:scale-x-0 before:bg-slate-500 before:transition-transform before:duration-[0.3s] before:ease-[ease] before:content-[''] md:ml-5 hover:before:md:scale-x-100 [&:not(.selected)]:text-slate-400 hover:[&:not(.selected)]:text-slate-800;
-  }
+    .navlink {
+        @apply relative block px-[3px] py-2.5 text-center text-inherit no-underline before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:scale-x-0 before:bg-slate-500 before:transition-transform before:duration-[0.3s] before:ease-[ease] before:content-[''] sm:min-w-[70px] sm:px-[5px] md:ml-5 hover:before:md:scale-x-100 [&:not(.selected)]:text-slate-400 hover:[&:not(.selected)]:text-slate-800;
+    }
 
-  .selected {
-    @apply before:bg-primary before:md:scale-x-100 max-w-md:text-slate-800;
-  }
+    .selected {
+        @apply before:bg-primary max-w-md:text-slate-800 before:md:scale-x-100;
+    }
 
-  a::not(.selected):hover {
-    color: var(--primary-color);
-  }
+    a::not(.selected):hover {
+        color: var(--primary-color);
+    }
 
-  a {
-    color: inherit;
-    transition: color linear 0.15s;
-  }
+    a {
+        color: inherit;
+        transition: color linear 0.15s;
+    }
 
-  /* h2 a,
+    /* h2 a,
   p a,
   footer a,
   .back-button {
@@ -99,7 +99,7 @@
     color: var(--text-main);
   } */
 
-  /* hr {
+    /* hr {
     padding: 0;
     border: 0;
     height: 10px;

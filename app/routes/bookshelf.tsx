@@ -180,6 +180,12 @@ const leadershipMaterial = [
       "Explore a career in software management with guidance from Netflix's Engineering Manager, Jem Young. Learn key motivations, challenges, and essential skills for effective leadership and meeting management, setting the stage for success in engineering management.",
     url: "https://www.engmanagement.dev/",
   },
+  {
+    name: "Enterprise Engineering Management 102",
+    description:
+      "Learn to build and lead high-performing technical teams with insights from Netflix's Ryan Burgess. Learn to establish OKRs and KPIs, develop team charters, refine hiring processes, and build strong partnerships. Enhance your leadership skills!",
+    url: "https://frontendmasters.com/courses/engineering-management/",
+  },
 ];
 
 export default function BookShelf() {
@@ -194,7 +200,7 @@ export default function BookShelf() {
 
       <div>
         <h4 className="text-2xl font-semibold text-slate-800">
-          Books & Courses I Enjoyed 📚
+          Kick Ass Leadership 📚
         </h4>
         <motion.div variants={textVariants}>
           <ul className="mt-4 space-y-2">

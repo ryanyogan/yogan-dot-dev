@@ -15,6 +15,14 @@ function NavLinks() {
         BLOG
       </NavLink>
 
+      <NavLink
+        prefetch="intent"
+        to="/bookshelf"
+        className={activeStyleCallback}
+      >
+        SHELF
+      </NavLink>
+
       <NavLink prefetch="intent" to="/about" className={activeStyleCallback}>
         ABOUT
       </NavLink>
