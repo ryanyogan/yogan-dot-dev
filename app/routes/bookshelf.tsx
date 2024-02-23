@@ -174,6 +174,12 @@ const leadershipMaterial = [
       "THIS BOOK ISN’T FOR THE `BORN LEADERS` THIS BOOK IS FOR THE REST OF US.",
     url: "https://www.engmanagement.dev/",
   },
+  {
+    name: "Engineering Management Fundamentals 101",
+    description:
+      "Explore a career in software management with guidance from Netflix's Engineering Manager, Jem Young. Learn key motivations, challenges, and essential skills for effective leadership and meeting management, setting the stage for success in engineering management.",
+    url: "https://www.engmanagement.dev/",
+  },
 ];
 
 export default function BookShelf() {
@@ -186,37 +192,37 @@ export default function BookShelf() {
 
       <hr className="my-8" />
 
+      <div>
+        <h4 className="text-2xl font-semibold text-slate-800">
+          Books & Courses I Enjoyed 📚
+        </h4>
+        <motion.div variants={textVariants}>
+          <ul className="mt-4 space-y-2">
+            {leadershipMaterial.map((language) => (
+              <li key={language.name}>
+                <a
+                  href={language.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-slate-800 hover:underline"
+                >
+                  {language.name}
+                </a>
+                <p className="text-sm text-gray-500">{language.description}</p>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+
+      <hr className="my-8" />
+
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
         className="grid grid-cols-1 gap-8 md:grid-cols-2"
       >
-        <div>
-          <h4 className="text-2xl font-semibold text-slate-800">
-            Leadership Material 📚
-          </h4>
-          <motion.div variants={textVariants}>
-            <ul className="mt-4 space-y-2">
-              {leadershipMaterial.map((language) => (
-                <li key={language.name}>
-                  <a
-                    href={language.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-slate-800 hover:underline"
-                  >
-                    {language.name}
-                  </a>
-                  <p className="text-sm text-gray-500">
-                    {language.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-
         <div>
           <h4 className="text-2xl font-semibold text-slate-800">
             Languages I Enjoy ❤️
