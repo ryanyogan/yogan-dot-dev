@@ -1,6 +1,5 @@
 import {
   Links,
-  LiveReload,
   Meta,
   MetaFunction,
   Outlet,
@@ -125,7 +124,6 @@ export default function App() {
         </Layout>
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
