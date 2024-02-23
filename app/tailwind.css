@@ -66,7 +66,7 @@
 
 @layer components {
     .navlink {
-        @apply relative block px-[5px] py-2.5 text-center text-inherit no-underline before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:scale-x-0 before:bg-slate-500 before:transition-transform before:duration-[0.3s] before:ease-[ease] before:content-[''] sm:min-w-[70px] md:ml-5 hover:before:md:scale-x-100 [&:not(.selected)]:text-slate-400 hover:[&:not(.selected)]:text-slate-800;
+        @apply relative block px-[3px] py-2.5 text-center text-sm no-underline before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:scale-x-0 before:bg-slate-500 before:transition-transform before:duration-[0.3s] before:ease-[ease] before:content-[''] sm:min-w-[70px] sm:px-[5px] sm:text-inherit md:ml-5 hover:before:md:scale-x-100 [&:not(.selected)]:text-slate-400 hover:[&:not(.selected)]:text-slate-800;
     }
 
     .selected {

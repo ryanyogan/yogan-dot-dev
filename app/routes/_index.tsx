@@ -97,7 +97,7 @@ export default function Index() {
               prefetch="intent"
               className="text-slate-600 underline"
             >
-              Check out my book shelf to see how `polyglot` I went. 🤣
+              Check out my book shelf
             </Link>
           </div>
         </div>
