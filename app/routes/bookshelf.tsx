@@ -229,7 +229,7 @@ export default function BookShelf() {
 
       <div>
         <h4 className="text-2xl font-semibold text-slate-800">
-          Kick Ass Leadership 📚
+          Awesome Leadership 📚
         </h4>
         <motion.div variants={textVariants}>
           <ul className="mt-4 space-y-2">
