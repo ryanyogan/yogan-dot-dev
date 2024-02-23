@@ -73,6 +73,18 @@ const programmingLanguages = [
       "A powerful, efficient, lightweight, embeddable scripting language.",
     url: "https://www.lua.org/",
   },
+  {
+    name: "Clojure",
+    description:
+      "A dynamic, general-purpose programming language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming.",
+    url: "https://clojure.org/",
+  },
+  {
+    name: "Erlang",
+    description:
+      "A general-purpose, concurrent, functional programming language, and a garbage-collected runtime system.",
+    url: "https://www.erlang.org/",
+  },
 ];
 
 const programmingFrameworks = [
@@ -158,6 +170,23 @@ const programmingFrameworks = [
     description:
       "An open-source platform designed to automate deploying, scaling, and operating application containers.",
     url: "https://kubernetes.io/",
+  },
+  {
+    name: "Flutter",
+    description:
+      "Google’s UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+    url: "https://flutter.dev/",
+  },
+  {
+    name: "React Native",
+    description:
+      "A framework for building native apps using React and JavaScript.",
+    url: "https://reactnative.dev/",
+  },
+  {
+    name: "Expo",
+    description: "A framework and a platform for universal React applications.",
+    url: "https://expo.dev/",
   },
 ];
 
