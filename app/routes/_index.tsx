@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs, MetaFunction, json } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { motion } from "framer-motion";
 
 import { getPosts } from "~/.server/posts";
@@ -92,13 +92,14 @@ export default function Index() {
           </p>
 
           <div>
-            <Link
-              to="/bookshelf"
-              prefetch="intent"
-              className="text-slate-600 underline"
+            <a
+              href="https://yogan.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-900 underline underline-offset-4"
             >
-              Check out my book shelf
-            </Link>
+              Read my daily journal?
+            </a>
           </div>
         </div>
       </div>
