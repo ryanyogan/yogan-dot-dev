@@ -1,49 +1,51 @@
-# syntax = docker/dockerfile:1
+# base node image
+FROM node:18-bullseye-slim as base
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=21.7.3
-FROM node:${NODE_VERSION}-slim as base
+# set for base and all layer that inherit from it
+ENV NODE_ENV production
 
-LABEL fly_launch_runtime="Remix"
+# Install openssl for Prisma
+# RUN apt-get update && apt-get install -y openssl
 
-# Remix app lives here
-WORKDIR /app
+# Install all node_modules, including dev dependencies
+FROM base as deps
 
-# Set production environment
-ENV NODE_ENV="production"
+WORKDIR /myapp
 
-# Install pnpm
-ARG PNPM_VERSION=9.0.6
-RUN npm install -g pnpm@$PNPM_VERSION
+ADD package.json package-lock.json ./
+RUN npm install --include=dev
 
-# Throw-away build stage to reduce size of final image
+# Setup production node_modules
+FROM base as production-deps
+
+WORKDIR /myapp
+
+COPY --from=deps /myapp/node_modules /myapp/node_modules
+ADD package.json package-lock.json ./
+RUN npm prune --omit=dev
+
+# Build the app
 FROM base as build
 
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
+WORKDIR /myapp
 
-# Install node modules
-COPY --link package-lock.json package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod=false
+COPY --from=deps /myapp/node_modules /myapp/node_modules
 
-# Copy application code
-COPY --link . .
+ADD . .
+RUN npm run build
 
-# Build application
-RUN pnpm run build
-
-# Remove development dependencies
-RUN pnpm prune --prod
-
-# Final stage for app image
+# Finally, build the production image with minimal footprint
 FROM base
 
-# Copy built application
-COPY --from=build /app /app
-
-# Start the server by default, this can be overwritten at runtime
-ENV PORT=8080
 ENV NODE_ENV="production"
+ENV PORT=8080
+
+WORKDIR /myapp
+
+COPY --from=production-deps /myapp/node_modules /myapp/node_modules
+COPY --from=build /myapp/build/server /myapp/build/server
+COPY --from=build /myapp/build/client /myapp/build/client
+COPY --from=build /myapp/public /myapp/public
+COPY --from=build /myapp/package.json /myapp/package.json
 
 CMD [ "npm", "run", "start" ]
