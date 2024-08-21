@@ -85,6 +85,11 @@ const programmingLanguages = [
       "A general-purpose, concurrent, functional programming language, and a garbage-collected runtime system.",
     url: "https://www.erlang.org/",
   },
+  {
+    name: "PHP",
+    description: "PHP 3... This was the first language I used that brought a paycheck in.  Always and forever!",
+    url: "https://www.php.net/"
+  }
 ];
 
 const programmingFrameworks = [
