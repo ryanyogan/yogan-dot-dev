@@ -1,0 +1,169 @@
+---
+title: The Rule of Three
+description: The joy of exploring React frameworks React Router v7, Tanstack Start, and Next.js.
+published: 2025-04-01
+featured: true
+---
+
+# {frontmatter.title}
+
+*A developer's journey through the modern React ecosystem*
+
+## The Joy of Framework Exploration
+
+There's something deeply satisfying about diving into new frameworks and technologies. I've spent over two decades in what some might call "tutorial hell," but I prefer to think of myself as a perpetual student of the craft—a course reviewer who never quite gets around to publishing the review.
+
+```javascript
+// My learning process in code
+const myBrain = {
+  seesNewFramework() {
+    return "Ooh, shiny!";
+  },
+  buysCoursesAndBooks() {
+    bankAccount -= 49.99;
+    return "Knowledge acquired!";
+  },
+  actuallyBuildsProjects() {
+    return Math.random() > 0.8 ? "Finally made something!" : "Maybe tomorrow...";
+  }
+};
+```
+
+## React Router v7: Back to the Future
+
+I've always had a soft spot for React Router, especially since its evolution from Remix. Server-side rendering with React brings me an almost nostalgic joy—not necessarily for the technical advantages, but because it feels like coming full circle to my roots.
+
+Remember the days of PHP, JSP, Perl, ColdFusion, and raw HTML/CSS with sprinkles of JavaScript? I do, and I miss them more than I probably should admit. There was something beautifully straightforward about that era of web development.
+
+React Router v7 (formerly part of Remix.run) embraces this philosophy while adding modern capabilities. The [official documentation](https://reactrouter.com/) showcases how it blends the best of both worlds.
+
+```jsx
+// React Router v7 basic setup
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    loader: rootLoader,
+    children: [
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+        loader: dashboardLoader,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);
+```
+
+## Infrastructure Love Affair
+
+My passion for infrastructure and servers sometimes puts me at odds with fully managed platforms like Vercel. It's not that Vercel doesn't work—it works brilliantly—but I miss the hands-on approach of configuring and optimizing my own infrastructure.
+
+As [Martin Fowler noted](https://martinfowler.com/articles/is-quality-worth-cost.html), sometimes the journey of building something yourself provides insights that no pre-packaged solution can offer.
+
+## Tanstack Start: The New Kid on the Block
+
+Tanstack Start looks absolutely promising. As a relative newcomer from the creators of React Query (now Tanstack Query), it's bringing fresh ideas to how we structure React applications.
+
+The [Tanstack ecosystem](https://tanstack.com/) has already revolutionized how we handle data fetching and state management, and Start appears poised to extend that magic to full application frameworks.
+
+```jsx
+// A hypothetical Tanstack Start route setup
+import { createRoute } from '@tanstack/start';
+
+export const userRoute = createRoute({
+  path: '/users/:userId',
+  component: UserComponent,
+  loader: async ({ params }) => {
+    return await fetchUser(params.userId);
+  }
+});
+```
+
+## Next.js: The Established Player
+
+Next.js has earned its place at the table, and I believe server actions do have a valuable role in modern web development. I'm eager to see them become faster and more widely adopted across the ecosystem.
+
+React Server Components, despite the controversy, make perfect sense to me. Of course navigation will be slow if you have 5-10 independent components each pulling down their own data! This is precisely why I appreciate React Router and Tanstack Start's approach—data fetching associated with routes provides a cleaner, more predictable loading pattern.
+
+As [Josh W. Comeau explains](https://www.joshwcomeau.com/react/server-components/), "Server Components aren't magic, but they do solve real problems."
+
+```jsx
+// Next.js Server Component example
+async function UserProfile({ userId }) {
+  // This data fetching happens on the server
+  const userData = await fetchUserData(userId);
+  
+  return (
+    <div>
+      <h1>{userData.name}'s Profile</h1>
+      <ClientSideInteractiveComponent initialData={userData} />
+    </div>
+  );
+}
+```
+
+Spinning loaders are the bane of user experience. One load and done? Sign me up!
+
+## Literary Inspiration: "The Road to Next"
+
+I recently discovered "The Road to Next" by Robin Wieruch, and I was genuinely surprised by how much I learned. His deep dive into Next.js 15 is comprehensive and enlightening. I cannot recommend this book enough for anyone looking to master Next.js.
+
+The irony? The application built in the book would be perfect for implementing in React Router v7 and Tanstack Start as well. This has inspired me to write full tutorials demonstrating how to achieve the same functionality across all three frameworks.
+
+You can find Robin's work at [roadtonext.com](https://www.road-to-next.com/) and his other excellent tutorials at [robinwieruch.de](https://www.robinwieruch.de/).
+
+## The Vite Factor
+
+Ah, Vite! The speed and flexibility it offers have been game-changing. The joy of deploying to my own Fly.io services, a dedicated box, or even Cloudflare with D1 makes me feel like a kid with new toys.
+
+```bash
+# The simplicity of deployment with Vite
+npm create vite@latest my-project
+cd my-project
+npm install
+npm run build
+# Now deploy anywhere you want!
+```
+
+Yes, you can run on Vercel too if that's your preference. It's the options that make me happy.
+
+## The Docker Dilemma
+
+I'm not claiming it's impossible to run Next.js on Docker—it certainly is possible. But have you seen it at scale? It can be challenging, to put it mildly.
+
+If you're going the Next.js route, either stick with Vercel (which is expertly optimized for it) or give [Dax](https://x.com/thdxr) some well-deserved appreciation for the hard work put into SST & OpenNext. Their efforts to make Next.js more portable deserve recognition.
+
+## Coming your way
+
+So what's next? I'm planning to create a series of tutorials comparing these three frameworks.
+
+I'll build the same application using React Router v7, Tanstack Start, and Next.js, showcasing the differences in approach, performance, and developer experience.
+
+This will be a fun and educational journey, and I hope you'll join me in exploring the nuances of each framework.
+
+I'll also be diving into the world of server actions, data fetching, and the various ways to handle routing in these frameworks.
+
+I'll be sharing my findings, code snippets, and insights along the way.
+
+In the mean time... want to see how fast React Router 7 with Sqlite may be? [https://tickets-fragrant-sky-883.fly.dev/](https://tickets-fragrant-sky-883.fly.dev/)
+
+Want to see the code? [https://github.com/ryanyogan/tickets-rr-sqlite](https://github.com/ryanyogan/tickets-rr-sqlite)
+
+## Conclusion
+
+The beauty of today's React ecosystem is the variety of approaches available to developers. Whether you prefer the classic routing model of React Router, the data-focused approach of Tanstack Start, or the integrated features of Next.js, there's something for every project and preference.
+
+My journey through these frameworks has taught me that there's no "one size fits all" solution. Each has its strengths and ideal use cases. The key is understanding the tradeoffs and choosing the right tool for your specific needs.
+
+So go ahead—buy those courses, read those books, and enjoy the exploration. Tutorial hell? Maybe. But it's a pretty enjoyable place to be when you're passionate about the craft.
+
+---
+
+*What's your experience with these frameworks? Have you tried building the same application with different tools to compare approaches? Share your thoughts in the comments below!*
